@@ -55,5 +55,16 @@ git clone https://github.com/puskar2sora/Portfolio.git
 
 # Navigate into the folder
 cd Portfolio
+📬 Contact
+
+💼 Puskar Nath
+🌐 Portfolio
+
+📧 Email Me
+
+🐙 GitHub
+
+🔗 LinkedIn
+ 
 
 # Open the index.html file in your browser
