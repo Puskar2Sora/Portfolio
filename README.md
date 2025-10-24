@@ -1,7 +1,8 @@
 # 🌐 Personal Portfolio – Puskar Nath
-
-> "I can be anything, just imagine me."
-
+<h3 align="center"> 
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=1200&size=28&duration=1000&color=39FF14&pause=500&center=true&vCenter=true&width=500&lines=I+can+be+anything,+just+imagine" />
+</h3>
+<br/><br/>
 Welcome to my personal portfolio website — a digital space where I showcase my skills, projects, and passion for technology and design.  
 Built using **HTML, CSS, and JavaScript**, this portfolio highlights my journey as a developer and creative problem-solver.
 
