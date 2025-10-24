@@ -1,0 +1,540 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+header {
+  background: #161b22;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #58a6ff;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #c9d1d9;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #58a6ff;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10%;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #58a6ff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #c9d1d9;
+}
+
+button {
+  margin-top: 20px;
+  background: #58a6ff;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1f6feb;
+}
+
+/* Sections */
+section {
+  padding: 80px 10%;
+}
+
+/* About Section */
+.about p {
+  line-height: 1.8;
+}
+
+/* Projects */
+.projects .project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-card {
+  background: #161b22;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Skills */
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background: #161b22;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+}
+
+/* Contact */
+.contact a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 15px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #161b22;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .projects .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* ===== Skills Section (Modern Grid) ===== */
+.skills {
+  text-align: center;
+}
+
+.skills-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.skill-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 20px 10px;
+  transition: all 0.3s ease;
+  width: 120px;
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px #58a6ff55;
+  border-color: #58a6ff;
+}
+
+.skill-card img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.skill-card:hover img {
+  transform: scale(1.2);
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  color: #c9d1d9;
+  margin: 0;
+}
+/* ===== End of Skills Section ===== */
+/* ===== ✨ Aurora Animated Gradient Glow Upgrade ✨ ===== */
+
+/* Animated Background Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #00c6ff, #ff00cc, #0072ff, #00ffc6);
+  background-size: 400% 400%;
+  animation: auroraMove 20s ease infinite;
+  opacity: 0.08;
+  z-index: -1;
+}
+
+@keyframes auroraMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* ===== 🌈 Dynamic Transition Overlay ===== */
+#transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #00c6ff, #ff00cc);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease, opacity 0.6s ease, background 0.6s ease;
+}
+
+#transition-overlay.active {
+  opacity: 1;
+  transform: scaleX(1);
+  pointer-events: all;
+}
+
+#transition-overlay.fade-out {
+  transform-origin: right;
+}
+
+/* Glowing Section Titles */
+section h2 {
+  font-size: 2.2rem;
+  color: #fff;
+  text-shadow: 0 0 10px #00c6ff, 0 0 20px #ff00cc44;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, #00c6ff, #ff00cc);
+  border-radius: 2px;
+}
+
+/* Animated Button Glow */
+button {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  color: #fff;
+  background: linear-gradient(90deg, #00c6ff, #ff00cc);
+  box-shadow: 0 0 20px #00c6ff66;
+  transition: 0.3s ease;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: buttonShine 3s infinite;
+}
+
+@keyframes buttonShine {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff00cc88;
+}
+
+/* Soft Glow for Project & Skill Cards */
+.project-card, .skill-card {
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #2e2e2e;
+}
+
+.project-card:hover, .skill-card:hover {
+  border-color: #00c6ff;
+  box-shadow: 0 0 20px #00c6ff55;
+  transform: translateY(-8px);
+}
+
+/* Footer Glow */
+footer {
+  background: rgba(20, 25, 35, 0.8);
+  box-shadow: 0 0 20px #0072ff33 inset;
+  border-top: 1px solid #30363d;
+}
+/* ===== 🚀 Floating Gradient Navbar Glow ===== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 15, 25, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 198, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.15);
+  transition: all 0.4s ease;
+}
+
+/* Glow effect that intensifies on scroll */
+header.scrolled {
+  background: rgba(15, 20, 35, 0.95);
+  border-color: rgba(255, 0, 204, 0.4);
+  box-shadow: 0 0 25px rgba(255, 0, 204, 0.25), 0 0 60px rgba(0, 198, 255, 0.15);
+}
+
+/* Navbar links glow on hover */
+.nav-links a {
+  position: relative;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00c6ff;
+  text-shadow: 0 0 10px #00c6ff, 0 0 20px #ff00cc;
+}
+/* ===== 🌌 Starfield Hero Canvas Layer ===== */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+#stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero h2, .hero p, .hero button {
+  position: relative;
+  z-index: 2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 70%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 90%);
+  z-index: 1;
+}
+/* ===== 💖 Pulsing 'Know More' Button Glow ===== */
+.hero button {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(90deg, #00c6ff, #ff00cc);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.4);
+  transition: 0.3s ease;
+  animation: pulseGlow 2.8s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.3),
+                0 0 30px rgba(255, 0, 204, 0.15);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 198, 255, 0.6),
+                0 0 50px rgba(255, 0, 204, 0.25);
+    transform: scale(1.04);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.3),
+                0 0 30px rgba(255, 0, 204, 0.15);
+    transform: scale(1);
+  }
+}
+
+.hero button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 30px rgba(255, 0, 204, 0.6),
+              0 0 60px rgba(0, 198, 255, 0.4);
+}
+/* ===== 🌟 Section Scroll-In Animations ===== */
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fancy slide-in for project cards */
+.project-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ===== 🌈 Smooth Section Transition Effects ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+section.visible,
+section.active-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add a gentle glow around the active section */
+section.active-section {
+  box-shadow: 0 0 40px rgba(0, 198, 255, 0.15);
+  transition: box-shadow 1s ease;
+}
+/* ===== 🎬 Page Transition Overlay ===== */
+#transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #00c6ff, #ff00cc);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Active transition animation */
+#transition-overlay.active {
+  opacity: 1;
+  transform: scaleX(1);
+  pointer-events: all;
+}
+
+/* Optional reverse animation (for smoother exit) */
+#transition-overlay.fade-out {
+  transform-origin: right;
+}
+/* ===== 🌈 Dynamic Transition Overlay ===== */
+#transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #00c6ff, #ff00cc);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease, opacity 0.6s ease, background 0.6s ease;
+}
+
+#transition-overlay.active {
+  opacity: 1;
+  transform: scaleX(1);
+  pointer-events: all;
+}
+
+#transition-overlay.fade-out {
+  transform-origin: right;
+}
+
